@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tabla de Multiplicar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tabla_de_multiplicar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="numero" placeholder="Ingrese un número"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button (click)="tabla()">Mostrar</button>
+    </ion-item>
+
+    <ion-item *ngFor="let num of rango">
+      {{numero}} * {{num}} = {{numero * num}}
+    </ion-item>
+
+    <button (click)="siguiente()">Ir a la próxima página</button>
+    <button (click)="anterior()">Ir a la página anterior</button>
+  </ion-list>
+</ion-content>

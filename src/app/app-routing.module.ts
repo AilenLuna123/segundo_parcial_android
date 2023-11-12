@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tabla-de-multiplicar',
+    loadChildren: () => import('./tabla-de-multiplicar/tabla-de-multiplicar.module').then( m => m.TablaDeMultiplicarPageModule)
+  },
+  {
+    path: 'maximo',
+    loadChildren: () => import('./maximo/maximo.module').then( m => m.MaximoPageModule)
+  },
 ];
 
 @NgModule({

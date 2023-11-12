@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+//Keith Ailen Luna Arias
+//2021-0471
 
 @Component({
   selector: 'app-home',
@@ -7,6 +11,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  siguiente(){
+    this.router.navigate(['../tabla-de-multiplicar']);
+  }
 
 }

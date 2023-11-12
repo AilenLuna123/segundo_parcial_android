@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Máximo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">maximo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="num1" placeholder="Ingrese un número"></ion-input>
+      <ion-input [(ngModel)]="num2" placeholder="Ingrese un número"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button (click)="maximo()">Validar</button>
+    </ion-item>
+
+    <ion-item>
+      {{result}}
+    </ion-item>
+
+    <button (click)="anterior()">Ir a la página anterior</button>
